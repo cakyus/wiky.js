@@ -1,15 +1,77 @@
 @charset "UTF-8";
-body { margin: 0 auto; width: 600px; }
-section { display: block; }
-section#articles { width: 440px; float: left; padding: 10px; background-color: #fbf0cc; }
-article > header { text-decoration: underline; margin-bottom: 10px; }
-aside { float: left; width: 100px; padding: 10px; }
-footer { overflow: hidden; clear: both; text-align: center; padding: 20px; }
-nav li { float: left; width: 100px; text-align:center; padding: 10px; color: #fff; }
-nav ul { list-style: none; overflow: hidden; padding: 0; margin: 0; background-color: #424242; }
-a { color: #65ac1c; }
-nav li a { color: #fff; }
+
+html, body {
+	height: 100%;
+}
+
+body { 
+	margin: 0 auto; 
+	width: 600px; 
+}
+
+section {
+	display: block; 
+}
+
+section#articles { 
+	width: 440px; 
+	float: left; 
+	padding: 10px; 
+	background-color: #fbf0cc; 
+}
+
+article > header { 
+	text-decoration: underline; 
+	margin-bottom: 10px; 
+}
+
+aside { 
+	float: left; 
+	width: 100px; 
+	padding: 10px; 
+}
+
+footer { 
+	overflow: hidden; 
+	clear: both; 
+	text-align: center; 
+	padding: 20px; 
+}
+
+nav li { 
+	float: left; 
+	width: 100px; 
+	text-align:center; 
+	padding: 10px; 
+	color: #fff; 
+}
+
+nav ul { 
+	list-style: none; 
+	overflow: hidden; 
+	padding: 0; 
+	margin: 0; 
+}
+
+a { 
+	color: #65ac1c; 
+	text-decoration: none;
+}
+	
+nav li a {
+	display: block;
+	padding: 10px;
+}
+
+nav li a:hover {
+	background-color: #ddd;
+}
 
 body#dev article {
 	border: 1px solid #000;
+}
+
+textarea {
+	width: 100%;
+	height: 500px;
 }
