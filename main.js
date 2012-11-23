@@ -1,13 +1,23 @@
 
 window.addEventListener('load', function() {
 	
-	$('#preview').html(wiky.process($('#textarea').val()));
+	$('#wikyViewHTML').html(wiky.process($('#wikyEditor').val()));
+	$('#wikyViewHTML').hide();
 	
 	// -- Event Listener --
-	$('input[name="buttonViewWiki"]').click(function(){
-		alert('buttonViewWiki');
+	$('.buttonViewWiki').click(function(){
+		$('#wikyEditor').show();
+		$('#wikyViewHTML').hide();
 	});
-	$('input[name="buttonViewHTML"]').click(function(){
-		alert('buttonViewHTML');
+	
+	$('.buttonViewHTML').click(function(){
+		$('#wikyViewHTML').show();
+		$('#wikyEditor').hide();
 	});
+	
+	$('#wikyEditor').keyup(function(){
+		$('#wikyViewHTML').html(wiky.process($('#wikyEditor').val()));
+	});
+	
+	
 });
