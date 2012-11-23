@@ -7,9 +7,15 @@
 		<script type="text/javascript" src="main.js"></script>
 		<title>Untitled Document</title>
 	<link href="wiky.css" rel="stylesheet" type="text/css">
+	<link href="wiky-html5.css" rel="stylesheet" type="text/css">
 	</head>
-	<body>
-		<textarea id="textarea" onchange="$('#preview').html(wiky.process($(this).val()));" cols="60" rows="20">=== Heading ===
+	<body id="dev">
+		<section id="article">
+			<article>
+				<form>
+					<input type="button" name="buttonViewWiki" value="Wiki" />
+					<input type="button" name="buttonViewHTML" value="HTML" />
+					<textarea id="textarea" onchange="$('#preview').html(wiky.process($(this).val()));" cols="60" rows="20">=== Heading ===
 Some content
 I would like to add another line
 
@@ -44,11 +50,13 @@ This is '''bold''', '''''bold-italic''''', and ''italic''
 ## Second-Third [http://www.google.com Google Here] 
 # third
 
-</textarea>
-		<br/>
+</textarea>								
 		<span style="display:block;width:600px;border:1px solid #999999;">
 			<span style="display:block;margin:10px 10px 10px 10px;" class="wiky_preview_area" id="preview">
 			</span>
 		</span>
+				</form>
+			</article>
+		</section>
 	</body>
 </html>
